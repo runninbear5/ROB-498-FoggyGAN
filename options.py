@@ -47,6 +47,3 @@ opt = parser.parse_args()
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 # print(device)
-
-if not os.path.exists(opt.checkpoints_dir):
-    os.makedirs(opt.checkpoints_dir)
