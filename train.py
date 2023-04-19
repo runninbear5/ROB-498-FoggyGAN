@@ -23,6 +23,18 @@ def get_lr(optimizer):
 
 if __name__ == '__main__':
 
+	MODEL_ARCH = opt.model_arch
+
+	if "5-5-5" in MODEL_ARCH:
+		from models_5_5_5 import *
+	elif "3-5-7" in MODEL_ARCH:
+		from models_3_5_7 import *
+	elif "7-5-3" in MODEL_ARCH:
+		from models_7_5_3 import *
+	else:
+		print("Please choose correct Model Architecture")
+		exit()
+
 	netG = CC_Module()
 	netG.to(device)
 
@@ -39,18 +51,6 @@ if __name__ == '__main__':
 	batches = int(dataset.len / opt.batch_size)
 
 	dataloader = DataLoader(dataset, batch_size=opt.batch_size, shuffle=True)
-
-	MODEL_ARCH = opt.model_arch
-
-	if "5-5-5" in MODEL_ARCH:
-		from models_5_5_5 import *
-	elif "3-5-7" in MODEL_ARCH:
-		from models_3_5_7 import *
-	elif "7-5-3" in MODEL_ARCH:
-		from models_7_5_3 import *
-	else:
-		print("Please choose correct Model Architecture")
-		exit()
 
 	if not os.path.exists(opt.checkpoints_dir):
 		os.makedirs(opt.checkpoints_dir)
