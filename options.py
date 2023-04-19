@@ -9,6 +9,7 @@ parser.add_argument('--gt_path', default='/content/drive/MyDrive/DeepRob Final P
 parser.add_argument('--output_location', default='./results/')
 
 parser.add_argument('--model_arch', default='5-5-5')
+parser.add_argument('--checkpoints_dir', default='./ckpts/')
 parser.add_argument('--batch_size', type=int, default=5)
 parser.add_argument('--num_images', type=int, default=0)
 
