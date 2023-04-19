@@ -13,9 +13,8 @@ output_video = opt.output_video
 
 img=[]
 img_names = os.listdir(dir)
-img_names.sort()
-for i in img_names:
-    img.append(cv2.imread(dir+i))
+for i in range(len(img_names)):
+    img.append(cv2.imread(dir+f"frame{i}.jpg"))
 
 height,width,layers=img[1].shape
 video=cv2.VideoWriter(output_video,cv2.VideoWriter_fourcc(*'MJPG'),30,(width,height))
