@@ -4,8 +4,8 @@ import os
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--data_path', default='/content/drive/MyDrive/DeepRob Final Project/Deep-WaveNet-Underwater-Image-Restoration/foggy-data/leftImg8bit_foggy/train')
-parser.add_argument('--gt_path', default='/content/drive/MyDrive/DeepRob Final Project/Deep-WaveNet-Underwater-Image-Restoration/clear-data/leftImg8bit/train')
+parser.add_argument('--data_path', default='../foggy-data/leftImg8bit_foggy/train')
+parser.add_argument('--gt_path', default='../clear-data/leftImg8bit/train')
 parser.add_argument('--output_location', default='./results/')
 
 parser.add_argument('--model_arch', default='5-5-5')
