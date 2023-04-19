@@ -6,8 +6,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--input_dir', default='./video_output')
 parser.add_argument('--output_video', default='./results.avi')
 
-dir = parser.input_dir
-output_video = parser.output_video
+opt = parser.parse_args()
+
+dir = opt.input_dir
+output_video = opt.output_video
 
 img=[]
 for i in os.listdir(dir):

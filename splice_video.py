@@ -5,8 +5,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--video', default='./driving.mp4')
 parser.add_argument('--output_dir', default='./video_output')
 
-video_loc = parser.video
-output_dir = parser.output_dir
+opt = parser.parse_args()
+
+video_loc = opt.video
+output_dir = opt.output_dir
 
 video = cv2.VideoCapture(video_loc)
 
