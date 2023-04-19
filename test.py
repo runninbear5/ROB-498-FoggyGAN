@@ -1,4 +1,3 @@
-from models_5_5_5 import CC_Module
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -15,9 +14,28 @@ import shutil
 from tqdm import tqdm
 from dataset_fog import resize_with_pad
 
-CHECKPOINTS_DIR = opt.checkpoints_dir
+MODEL_ARCH = opt.model_arch
+
+if "5-5-5-heavy" in MODEL_ARCH:
+    CHECKPOINTS_DIR = "./chkpts_heavy"
+    from models_5_5_5 import CC_Module
+elif "5-5-5" in MODEL_ARCH:
+    CHECKPOINTS_DIR = "./chkpts_5-5-5"
+    from models_5_5_5 import CC_Module
+elif "3-5-7" in MODEL_ARCH:
+    CHECKPOINTS_DIR = "./chkpts_3-5-7"
+    from models_3_5_7 import CC_Module
+elif "7-5-3" in MODEL_ARCH:
+    CHECKPOINTS_DIR = "./chkpts_7-5-3"
+    from models_7_5_3 import CC_Module
+else:
+    print("Please choose correct Model Architecture")
+    exit()
+
+
 INP_DIR = opt.testing_dir_inp
 CLEAN_DIR = opt.testing_dir_gt
+OUTPUT_DIR = opt.output_location
 
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
@@ -29,7 +47,7 @@ network.load_state_dict(checkpoint['model_state_dict'])
 network.eval()
 network.to(device)
 
-result_dir = './results/'
+result_dir = OUTPUT_DIR
 if not os.path.exists(result_dir):
     os.makedirs(result_dir)
 
