@@ -17,16 +17,16 @@ from dataset_fog import resize_with_pad
 MODEL_ARCH = opt.model_arch
 
 if "5-5-5-heavy" in MODEL_ARCH:
-    CHECKPOINTS_DIR = "./chkpts_heavy"
+    CHECKPOINTS_DIR = "./ckpts_heavy"
     from models_5_5_5 import CC_Module
 elif "5-5-5" in MODEL_ARCH:
-    CHECKPOINTS_DIR = "./chkpts_5-5-5"
+    CHECKPOINTS_DIR = "./ckpts_5-5-5"
     from models_5_5_5 import CC_Module
 elif "3-5-7" in MODEL_ARCH:
-    CHECKPOINTS_DIR = "./chkpts_3-5-7"
+    CHECKPOINTS_DIR = "./ckpts_3-5-7"
     from models_3_5_7 import CC_Module
 elif "7-5-3" in MODEL_ARCH:
-    CHECKPOINTS_DIR = "./chkpts_7-5-3"
+    CHECKPOINTS_DIR = "./ckpts_7-5-3"
     from models_7_5_3 import CC_Module
 else:
     print("Please choose correct Model Architecture")
