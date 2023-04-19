@@ -19,7 +19,7 @@ CHECKPOINTS_DIR = opt.checkpoints_dir
 INP_DIR = opt.testing_dir_inp
 CLEAN_DIR = opt.testing_dir_gt
 
-device = 'cuda:0' if torch.cuda.is_available() else 'cpu'        
+device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
 ch = 3
 
@@ -29,7 +29,7 @@ network.load_state_dict(checkpoint['model_state_dict'])
 network.eval()
 network.to(device)
 
-result_dir = './facades/Ours_EUVP/'
+result_dir = './results/'
 if not os.path.exists(result_dir):
     os.makedirs(result_dir)
 
@@ -40,10 +40,10 @@ if __name__ =='__main__':
     with tqdm(total=len(total_files)) as t:
 
         for m in total_files:
-        
+
             img=cv2.imread(INP_DIR + str(m))
             img = resize_with_pad(img, (256,256), (0,0,0))
-            img = img[:, :, ::-1]   
+            img = img[:, :, ::-1]
             img = np.float32(img) / 255.0
             h,w,c=img.shape
 
@@ -62,7 +62,7 @@ if __name__ =='__main__':
 
             t.set_postfix_str("name: {} | old [hw]: {}/{} | new [hw]: {}/{}".format(str(m), h,w, output.shape[0], output.shape[1]))
             t.update(1)
-            
+
     end = time.time()
     print('Total time taken in secs : '+str(end-st))
     print('Per image (avg): '+ str(float((end-st)/len(total_files))))
