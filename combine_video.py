@@ -12,7 +12,9 @@ dir = opt.input_dir
 output_video = opt.output_video
 
 img=[]
-for i in os.listdir(dir):
+img_names = os.listdir(dir)
+img_names.sort()
+for i in img_names:
     img.append(cv2.imread(dir+i))
 
 height,width,layers=img[1].shape
