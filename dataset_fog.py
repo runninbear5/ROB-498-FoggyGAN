@@ -83,8 +83,13 @@ class Dataset_Load(Dataset):
     def get_file_paths(self, root, gt_path):
         filesA, filesB = [], []
 
+        if opt.fog_density == "light":
+            density = "0.01"
+        elif opt.fog_density == "heavy":
+            density = "0.02"
+
         for city in os.listdir(root):
-            filesA += sorted([x for x in glob.glob(os.path.join(root, city) + "/*.*") if "0.02" in x])
+            filesA += sorted([x for x in glob.glob(os.path.join(root, city) + "/*.*") if density in x])
             filesB += sorted(glob.glob(os.path.join(gt_path, city) + "/*.*"))
 
         return filesA, filesB
