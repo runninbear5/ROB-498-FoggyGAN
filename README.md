@@ -13,7 +13,7 @@ Training: [![Open In Colab](https://colab.research.google.com/assets/colab-badge
 
 [5-5-5 Model Demo Comparison](https://www.youtube.com/watch?v=IoQ2-rlWHsc)
 
-[5-5-5-Heavy Model Demo Comparison](https://www.youtube.com/watch?v=E-q5KhJ4N-)
+[5-5-5-Heavy Model Demo Comparison]( https://youtu.be/E-q5KhJ4N-g)
 
 ## Citations
 M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, “The Cityscapes Dataset for Semantic Urban Scene Understanding,” in Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.
