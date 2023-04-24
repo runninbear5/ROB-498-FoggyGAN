@@ -8,6 +8,13 @@ Testing: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.
 
 Training: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/drive/10SaXf-RU5M3X20gxdT8FU9bMSQfnAzeE#scrollTo=GBOb1zRbII-Z](https://colab.research.google.com/drive/169w6pYdfSgdUkYB5ZpmBqAoOgFLwkwfM#scrollTo=FkOpJC5-pL92))
 
+## Demo Videos
+[5-5-5 Model Demo](https://www.youtube.com/watch?v=y9Q6KKBxgrI)
+
+[5-5-5 Model Demo Comparison](https://www.youtube.com/watch?v=IoQ2-rlWHsc)
+
+[5-5-5-Heavy Model Demo Comparison](https://www.youtube.com/watch?v=E-q5KhJ4N-)
+
 ## Citations
 M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, “The Cityscapes Dataset for Semantic Urban Scene Understanding,” in Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.
 
