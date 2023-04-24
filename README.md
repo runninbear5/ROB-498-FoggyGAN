@@ -1,14 +1,12 @@
 # ROB-498-FoggyGAN
+This Model was an extension of the paper Deep-WaveNet-Underwater-Image-Restoration.
 
-## To be used with a Notebook
+The goal of this model is to restore foggy images to be used with self driving cars.
 
+## Colab Notebooks for Streamlined Testing and Training
 Testing: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/10SaXf-RU5M3X20gxdT8FU9bMSQfnAzeE#scrollTo=GBOb1zRbII-Z)
 
 Training: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/drive/10SaXf-RU5M3X20gxdT8FU9bMSQfnAzeE#scrollTo=GBOb1zRbII-Z](https://colab.research.google.com/drive/169w6pYdfSgdUkYB5ZpmBqAoOgFLwkwfM#scrollTo=FkOpJC5-pL92))
-
-This Model was an extension of the paper Deep-WaveNet-Underwater-Image-Restoration
-
-The goal of this model is to restore foggy images to be used with self driving cars
 
 ## Citations
 M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, and B. Schiele, “The Cityscapes Dataset for Semantic Urban Scene Understanding,” in Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.
